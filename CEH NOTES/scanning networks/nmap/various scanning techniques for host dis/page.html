@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NMAP</title>
+</head><body><br/>
+<u><b><span style="font-size: 20pt">Verbose scan</span></b></u><br/>
+<br/>
+<span style="font-size: 14pt">-v: verbose scan<br/>
+<br/>
+</span><span style="font-size: 14pt">command: nmap -v google.com</span><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div style="text-align: left"><b><span style="font-size: 21pt"><u>ICMP ECHO ping scan</u></span></b><span style="font-size: 21pt">&nbsp;</span><br/>
+<br/>
+<span style="font-size: 15pt">-sn: Ping Scan - disable port scan<br/>
+-PE: Perform the ICMP ECHO ping scan <br/>
+<br/>
+explain: This scan is useful for locating active devices or determining if ICMP is passing through a firewall<br/>
+<br/>
+</span></div><div style="text-align: left"><span style="font-size: 15pt">command: nmap -sn -PE google.com</span></div><span style="font-size: 14pt"><br/>
+</span><br/>
+<img src="image 3.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><u><b>UDP ping scan</b></u>&nbsp;<br/>
+</span><br/>
+<span style="font-size: 16pt">-sn: Ping Scan - disable port scan<br/>
+</span><b><span style="font-size: 16pt">-PU: UDP scan</span><span style="font-size: 12pt"><br/>
+</span><span style="font-size: 12pt"><br/>
+</span></b><b><span style="font-size: 14pt">command: sudo nmap -sn -PU 142.250.70.110</span></b><br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+<br/>
+<b><u><span style="font-size: 20pt">ARP ping scan</span></u></b><span style="font-size: 14pt"><br/>
+</span><span style="font-size: 14pt"><br/>
+<span style="font-size: 16pt">-sn: Ping Scan - disable port scan</span><br/>
+-PR: use to perform ARP ping scan<br/>
+<br/>
+command: nmap -sn -PR 142.250.70.110<br/>
+<br/>
+</span><img src="image 4.png" /><br/>
+<br/>
+<span style="font-size: 20pt"><u><b><br/>
+</b></u></span><span style="font-size: 20pt"><u><b>TCP SYN ping scan</b></u></span><span style="font-size: 14pt"><br/>
+</span><span style="font-size: 14pt"><br/>
+<span style="font-size: 16pt">-sn: Ping Scan - disable port scan</span><br/>
+-PS: use to perform SYN ping scan<br/>
+<br/>
+command: nmap -sn -PS 142.250.70.110<br/>
+<br/>
+</span><img src="image 5.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<b><u><span style="font-size: 20pt">TCP ACK ping scan</span></u></b><span style="font-size: 14pt"><br/>
+</span><span style="font-size: 14pt"><br/>
+<span style="font-size: 16pt">-sn: Ping Scan - disable port scan</span><br/>
+-PA: use to perform ACK ping scan<br/>
+<br/>
+command: nmap -sn -PA 142.250.70.110<br/>
+<br/>
+</span><img src="image 6.png" /><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><u><b>IP protocal ping scan</b></u></span><span style="font-size: 14pt"><span style="font-size: 16pt"><br/>
+</span></span><span style="font-size: 14pt"><span style="font-size: 16pt"><br/>
+</span><span style="font-size: 16pt">-sn: Ping Scan - disable port scan</span><br/>
+-PS: use to perform SYN ping scan<br/>
+<br/>
+command: sudo nmap -sn -PO 142.250.70.110<br/>
+<br/>
+</span><img src="image 7.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<b><u><span style="font-size: 20pt">ICMP address Mask ping scan<br/>
+</span></u></b><br/>
+<span style="font-size: 14pt"><span style="font-size: 16pt">-sn: Ping Scan - disable port scan</span><br/>
+-PM: use to perform an ICMP address mask ping scan<br/>
+<br/>
+command: nmap -sn -PM 142.250.70.110<br/>
+<br/>
+</span><img src="image 8.png" /><br/>
+<br/>
+</body></html>

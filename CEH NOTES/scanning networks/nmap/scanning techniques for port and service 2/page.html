@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Scanning techniques for Port and Service discover</title>
+</head><body><b><u><span style="font-size: 20pt">TCP Connect / full-open scan</span></u></b><br/>
+<br/>
+<span style="font-size: 14pt"><span style="font-size: 16pt">-sT: </span>use to perform <span style="font-size: 16pt">TCP Connect / full open scan</span><br/>
+-v: Increase verbosity level (use -vv or more for greater effect)<br/>
+<br/>
+</span><span style="font-size: 14pt">command: nmap -sT -v 142.250.70.110</span><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+<br/>
+<b><u><span style="font-size: 20pt">Stealth scan (Half-Open scan)<br/>
+</span></u></b><br/>
+<span style="font-size: 14pt"><span style="font-size: 16pt">-sT: </span>use to perform stealth scan<span style="font-size: 16pt">&nbsp;/ TCP half-open scan</span><br/>
+-v: Increase verbosity level (use -vv or more for greater effect)<br/>
+<br/>
+command: sudo nmap -sS -v 142.250.70.110<br/>
+</span><br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+<br/>
+<b><u><span style="font-size: 20pt">Xmas scan<br/>
+</span></u></b><br/>
+<span style="font-size: 14pt"><span style="font-size: 16pt">-sX: </span>use to perform Xmas<span style="font-size: 16pt">&nbsp;scan</span><br/>
+-v: Increase verbosity level (use -vv or more for greater effect)<br/>
+<br/>
+command: sudo nmap -sX -v 142.250.70.110<br/>
+</span><br/>
+<img src="image 3.png" /><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><u><b>TCP Maimon scan<br/>
+</b></u></span><br/>
+<span style="font-size: 14pt"><span style="font-size: 16pt">-sM: </span>use to perform TCP Maimon<span style="font-size: 16pt">&nbsp;scan</span><br/>
+-v: Increase verbosity level (use -vv or more for greater effect)<br/>
+<br/>
+command: sudo nmap -sM -v 142.250.70.110<br/>
+<br/>
+</span><img src="image 4.png" /><br/>
+</body></html>

